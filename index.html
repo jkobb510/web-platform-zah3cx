@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <button id="renderButton" onclick="renderGif()">
+        Click This For a Surprise
+      </button>
+
+      <div id="gifContainer">
+        <img
+          src="https://i.pinimg.com/originals/6c/ef/ba/6cefba78c0b7db1fad684c486e83483f.gif"
+          alt="Animated GIF"
+        />
+        <button id="exitButton" onclick="exitGif()">X</button>
+        <!-- Exit button added -->
+      </div>
+    </nav>
+    <main></main>
+    <script>
+      function renderGif() {
+        document.getElementById('renderButton').style.display = 'none';
+        document.getElementById('gifContainer').style.display = 'block';
+      }
+      function exitGif() {
+        document.getElementById('gifContainer').style.display = 'none';
+        document.getElementById('renderButton').style.display = 'block'; // Show the render button again
+      }
+    </script>
+  </body>
+</html>
